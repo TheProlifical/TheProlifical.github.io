@@ -1,0 +1,102 @@
+
+
+#welcome {
+    position: relative;
+    left: 10%;
+    top: 32px;
+    font-size: 48px;
+    width: fit-content;
+    transition: all .25s cubic-bezier(0, -0.96, 0.17, 1.06);
+
+}
+#welcome:hover {
+    color: rgb(251, 202, 202);
+}
+#underwe {
+    width: 700px;
+    position: relative;
+    left: 10%;
+    top: 20px;
+    color: rgb(197, 197, 197);
+    letter-spacing: 1px;
+    transition: all 3.65s cubic-bezier(0, -0.96, 0.17, 1.06);
+}
+#underwe:hover {
+    color: rgb(203, 193, 193);
+}
+
+#profile {
+    border-radius: 200px;
+    width: 30%;
+    height: 30vw;
+    position: absolute;
+    right: 10px;
+    top: 30%;
+    transform: scale(.9);
+	transition: all .04s cubic-bezier(0, -0.96, 0.17, 1.06);
+}
+
+section#special{
+    height: 75vh!important;
+}
+
+section {
+    height: 100vh;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 100px;
+    width: max-content;
+    top: 10px;
+}
+.card {
+    background-size: cover;
+    background-position: center; /* Set to center for better effect */
+    width: 600px;
+    transform: scale(.9);
+    border-radius: .5rem;
+    transition: all .25s cubic-bezier(0, -0.96, 0.17, 1.06);
+	background-size: 588px;
+}
+.card:nth-child(1) {
+    background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+.card:nth-child(2) {
+    background-image: url('this-cityscape-showcases-a-minimalist-skyscraper-against-a-gradient-sky-ideal-f-awjf2jj4.jpeg');
+}
+.card:hover {
+    transform: scale(1.1) translateX(50px);
+    width: 490px;
+}
+.card * {
+    margin-left: 10px;
+}
+
+#profile:hover {
+    transform: scale(.95);
+	animation: rotate 900ms cubic-bezier(0, -0.96, 0.17, 1.06);;
+}
+
+@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+canvas { display: block; }
+#playButton {
+	background-color: #020202;
+	border: 2px solid #1d2f663d;
+    padding: 8px;
+    font-size: 42px;
+    border-radius: 6px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+	transition: all .4s ease-in-out;
+}
+
+.fa-play, .fa-pause {
+	color: white;
+	padding: 6px;
+	padding-inline: 12px;
+}
