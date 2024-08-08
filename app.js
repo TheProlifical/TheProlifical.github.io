@@ -25,16 +25,24 @@ function main() {
             alert('Failed to load the 3D model.');
         });
 
-        const light = new THREE.PointLight(0xffffff, .001);
+        const light = new THREE.PointLight(0xffffff, 0.5); // Adjusted intensity for better visibility
         light.position.set(5, 5, 5);
         scene.add(light);
 
         document.addEventListener('mousemove', onDocumentMouseMove, false);
+        window.addEventListener('resize', onWindowResize, false); // Add resize event listener
     }
 
     function onDocumentMouseMove(event) {
         mouseX = (event.clientX / window.innerWidth) * 2 - 1;
         mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+    }
+
+    function onWindowResize() {
+        // Update the size of the renderer and camera aspect ratio on window resize
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
     }
 
     function animate() {
